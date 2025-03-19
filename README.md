@@ -16,3 +16,9 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+## run
+
+javac -d mods --module-path "$PATH_TO_FX" --add-modules javafx.controls,javafx.graphics src/module-info.java src/game/FlightGame.java
+
+java --module-path "$PATH_TO_FX:mods" --add-modules javafx.controls,javafx.graphics -m FlightGame/game.FlightGame
